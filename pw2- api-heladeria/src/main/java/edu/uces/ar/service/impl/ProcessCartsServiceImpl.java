@@ -250,7 +250,7 @@ public class ProcessCartsServiceImpl implements ProcessCartsService{
 				dateFrom = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").parse(from); 
 				dateTo = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").parse(to);
 				
-		        if (date.compareTo(dateFrom) > 0 && date.compareTo(dateTo) < 0) { 
+		        if (date.compareTo(dateFrom) >= 0 && date.compareTo(dateTo) <= 0) { 
 		  
 					ReportDTO reportDTO = new ReportDTO();
 					BeanUtils.copyProperties(rep, reportDTO);
